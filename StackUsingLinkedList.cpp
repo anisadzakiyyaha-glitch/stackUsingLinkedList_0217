@@ -26,5 +26,9 @@ class stack
         top = NULL;
     }
 
+     int push(int value)
+    {
+        node*newnode = new node();
+    }
 };
 
