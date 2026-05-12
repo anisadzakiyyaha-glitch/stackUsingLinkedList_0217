@@ -44,8 +44,8 @@ class stack
             cout << "Stack is Empty." << endl;
             node *temp = top;
             top = top->next;
+             cout << "Popped value : " << top->data << endl;
         }
     }
-
 };
 
