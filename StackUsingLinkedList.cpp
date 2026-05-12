@@ -63,7 +63,7 @@ class stack
                 cout << current->data << " " << endl;
                 current = current->next;
             }
-             cout << endl;
+            cout << endl;
         }
     } // return the value of the top node
 
@@ -77,9 +77,54 @@ class stack
 int main()
 {
     stack stack;
+
     int  choice = 0;
     int value;
-    
-    while (choice !=5)
-};
 
+    while (choice !=5)
+    {
+        cout << "1.push\n";
+        cout << "2.pop\n";
+        cout << "3.peek\n";
+        cout << "4.exit\n";
+        cout << "Enter your choice: ";
+        cin >> choice;
+
+        switch (choice)
+        {
+        case 1:
+            cout << "Enter value to push: ";
+            cin >> value;
+            stack.push(value); // push the entered value into the stack
+            break;
+        case 2:
+            if(!stack.isEmpty())
+            {
+                stack.pop(); // pop  the  top element from the stack
+            }
+            else
+            {
+                cout << "Stack is empty. Cannot pop." << endl;
+            }
+            break;
+        case 3:
+            if(!stack.isEmpty())
+            {
+                stack.peek(); // get the value of the top element
+            }
+            else
+            {
+                cout << "Stack is empty. Cannot peek." << endl;
+            }
+            break;
+        case 4:
+            cout << "Exiting Program." << endl;
+            break;
+        default:
+            cout << "Invalid choice. Try again" << endl;
+            break;
+        }
+        cout << endl;
+    }
+    return 0;
+};
