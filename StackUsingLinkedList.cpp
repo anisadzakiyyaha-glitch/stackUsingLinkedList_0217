@@ -8,5 +8,9 @@ class node
     int data;
     node* next;
 
+    node()
+    {
+        next = NULL;
+    }
 };
 
