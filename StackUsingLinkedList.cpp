@@ -42,6 +42,8 @@ class stack
         if (isEmpty())
         {
             cout << "Stack is Empty." << endl;
+            node *temp = top;
+            top = top->next;
         }
     }
 
