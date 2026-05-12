@@ -20,42 +20,45 @@ class stack
     private:
     node* top; // pointer to the top node of the stack
 
-     public:
+    public:
     stack()
     {
         top = NULL;
     }
-
-     int push(int value)
+    int push(int value)
     {
         node*newnode = new node();
-         newnode->data = value;
+        newnode->data = value;
         newnode ->next = top;
         top = newnode;
-         cout << "push value: " << value << endl;
+        cout << "push value: " << value << endl;
         return value;
     }
 
-     // pop operation: Remove the topmost element from the stuck
+    // pop operation: Remove the topmost element from the stuck
     void pop()
     {
         if (isEmpty())
         {
             cout << "Stack is Empty." << endl;
-            node *temp = top;
-            top = top->next;
-             cout << "Popped value : " << top->data << endl;
         }
 
-         // peel/top operation: Retrive the value of the topset element witchout removing
+        node *temp = top;
+        top = top->next;
+        cout << "Popped value : " << top->data << endl;
+    }
+
+     // peel/top operation: Retrive the value of the topset element witchout removing
     void peek()
     {
         if (top == NULL)
         {
             cout << "List is empty." << endl;
         }
+        else
+        {
+            node *current = top;
+           
+        }
     } // return the value of the top node
-
-    }
 };
-
