@@ -35,5 +35,15 @@ class stack
          cout << "push value: " << value << endl;
         return value;
     }
+
+     // pop operation: Remove the topmost element from the stuck
+    void pop()
+    {
+        if (isEmpty())
+        {
+            cout << "Stack is Empty." << endl;
+        }
+    }
+
 };
 
